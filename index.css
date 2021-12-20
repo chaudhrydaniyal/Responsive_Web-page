@@ -1,0 +1,63 @@
+body{
+    background-color: rgb(237, 241, 244);
+    color: rgb(38, 72, 94);
+    font-weight: 500;
+}
+
+
+ul {
+    list-style-type: none;
+  
+}
+
+
+.borderless td, .borderless th {
+    border: none;
+}  
+
+
+#div-to-expand.fullscreen ,#div-to-expand-2.fullscreen, #div-to-expand-3.fullscreen,#div-to-expand-4.fullscreen ,#div-to-expand-5.fullscreen, #div-to-expand-6.fullscreen, #div-to-expand-7.fullscreen   {
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.form-control , .form-select{
+    border-radius: 10px;
+}
+
+
+
+
+
+#fullscreen , #fullscreen-2 ,#fullscreen-3,#fullscreen-4,#fullscreen-5,#fullscreen-6,#fullscreen-7{
+    float: right;
+    border: none;
+    background-color: white;
+}
+
+
+
+#outer-div {
+    
+    text-align: center;
+    background-color: #0666a3
+}
+  
+#inner-div {
+   
+    margin: 0 auto;
+    padding: 3px;
+    background-color: #8ebf42
+}
+
+
+.dot {
+    height: 1vw;
+    width: 1vw;
+    border-radius: 50%;
+    display: inline-block;
+}

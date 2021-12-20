@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-sm navbar-light ">
+
+        <button class="navbar-toggler" style="  margin-left: auto;  margin-right: auto;" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav container-fluid bg-white border ms-4 p-4 mt-4 d-flex justify-content-around"
+                style=" max-width: 96%; border-radius: 15px;">
+                <img style="max-width: 50px;  margin-bottom:1vh; margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 16.png" alt="...">
+                <img style="max-width: 50px; margin-bottom:1vh;   margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 3.png" alt="...">
+                <img style="max-width: 50px; margin-bottom:1vh;  margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 2.png" alt="...">
+                <img style="max-width: 50px; margin-bottom:1vh;  margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 4.png" alt="...">
+                <img style="max-width: 50px;margin-bottom:1vh;   margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 17.png" alt="...">
+                <img style="max-width: 50px;margin-bottom:1vh;   margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 14.png" alt="...">
+                <img style="max-width: 50px; margin-bottom:1vh;  margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 6.png" alt="...">
+                <img style="max-width: 50px;margin-bottom:1vh;   margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 15.png" alt="...">
+                <img style="max-width: 50px; margin-bottom:1vh;  margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 5.png" alt="...">
+                <img style="max-width: 50px; margin-bottom:1vh;  margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 7.png" alt="...">
+                <img style="max-width: 50px; margin-bottom:1vh;  margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 8.png" alt="...">
+                <img style="max-width: 50px; margin-bottom:1vh;  margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 9.png" alt="...">
+                <img style="max-width: 50px; margin-bottom:1vh;  margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 10.png" alt="...">
+                <img style="max-width: 50px; margin-bottom:1vh;  margin-left: auto; margin-right: auto;"
+                    src="icons/Asset 11.png" alt="...">
+            </div>
+        </div>
+
+    </nav>
+
+
+
+
+
+
+
+    <div class="row" style="  margin-left: auto;
+    margin-right: auto;">
+
+
+        <div class="col-lg-5">
+            <div class="container bg-white border  m-2 mt-3 pb-5" style="  border-radius: 15px;">
+                <div id="div-to-expand" style="background-color: white;">
+                    <div style="display: flex; justify-content: space-between;" class="p-4 ">
+
+                        <h4>Basic Information</h4><button id="fullscreen">
+                            <img id='btn1' src="maximize.svg" alt="Maximize" />
+                        </button>
+                    </div>
+
+
+
+
+                    <form class="mt-4 p-3">
+                        <div class="row">
+                            <div class="form-group col">
+                                <label for="CustomerNo">Customer No</label>
+                                <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group col">
+                                <label for="VatNo">Vat No.</label>
+                                <input type="name" class="form-control" id="VatNo" aria-describedby="emailHelp">
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label for="CompanyName">Company Name</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-group col">
+                                <label for="BalanceLCY">Balance LCYo</label>
+                                <input type="name" class="form-control" id="BalanceLCY" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group col">
+                                <label for="CustomerNo">Balance Duel(LCY)</label>
+                                <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="form-group col">
+                                <label for="CustomerNo">Credit Limit</label>
+                                <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group col">
+                                <label for="CustomerNo">Salesperson Code</label>
+                                <select class="form-select" aria-label="Default select example">
+
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-group col">
+                                <label for="CustomerNo">Currensy</label>
+                                <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group col">
+                                <label for="CustomerNo">Language Code</label>
+                                <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="CustomerNo">Customer Status</label>
+                            <select class="form-select" aria-label="Default select example">
+
+                            </select>
+                        </div>
+
+                        <div class="text-center mt-5 mb-5" style="font-size: small ;">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                            tincidunt ut
+                            laoreet
+                            dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                            ullamcorper
+                            suscipit
+                            lobortis nisl ut aliquip ex e
+                        </div>
+                    </form>
+                    <br>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="container bg-white border   m-2 mt-3 p-4" style="  border-radius: 15px;">
+
+                <h4>Address</h4>
+
+                <form>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="CustomerNo">Address 1</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="VatNo">Address 2</label>
+                            <input type="name" class="form-control" id="VatNo" aria-describedby="emailHelp">
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="CompanyName">City</label>
+                        <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="BalanceLCY">Postal Code</label>
+                            <input type="name" class="form-control" id="BalanceLCY" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">Country/Region Code</label>
+                            <select class="form-select" aria-label="Default select example">
+
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="CustomerNo">Phone Number</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">Email Address</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="CustomerNo">Invoice Email</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">Shipment Email</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="CustomerNo">Primary Contact code</label>
+                            <select class="form-select" aria-label="Default select example">
+
+                            </select>
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">Contact Name</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="CustomerNo">VAT Registration No.</label>
+                        <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                    </div>
+                    <br><br>
+
+                    <div class="d-flex flex-column">
+
+
+
+                        <div>Do Not Confirm Back Orders <input class="form-check-input" style="float: right;"
+                                type="checkbox" id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+                        <div>Normal Pricing <input class="form-check-input" style="float: right;" type="checkbox"
+                                id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+                        <div>1K Pricing <input class="form-check-input" style="float: right;" type="checkbox"
+                                id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+                        <div>Carton Pricing<input class="form-check-input" style="float: right;" type="checkbox"
+                                id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+                        <div>Pack Pricing <input class="form-check-input" style="float: right;" type="checkbox"
+                                id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+
+                        <div>Special Pricing <input class="form-check-input" style="float: right;" type="checkbox"
+                                id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+                        <div>Pricing Comments <input class="form-check-input" style="float: right;" type="checkbox"
+                                id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+                    </div>
+
+
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+
+
+                    <div class="d-flex flex-column">
+
+
+
+                        <div>Detailed Order Confirmation <input class="form-check-input" style="float: right;"
+                                type="checkbox" id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+                        <div>Detailed Shipment Sheet <input class="form-check-input" style="float: right;"
+                                type="checkbox" id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+                        <div>Shipment Charge Per Day <input class="form-check-input" style="float: right;"
+                                type="checkbox" id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+                        <div>MyUneek Active <input class="form-check-input" style="float: right;" type="checkbox"
+                                id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+                        <div>Use Alternative DPD Account <input class="form-check-input" style="float: right;"
+                                type="checkbox" id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+
+                        <div>Do Not Allow PickBST <input class="form-check-input" style="float: right;" type="checkbox"
+                                id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+                        <div>Do Not Send BO Change E-mail <input class="form-check-input" style="float: right;"
+                                type="checkbox" id="checkboxNoLabel" value="" aria-label="..." /></div>
+                        <div>Do Not Merge Shipments<input class="form-check-input" style="float: right;" type="checkbox"
+                                id="checkboxNoLabel" value="" aria-label="..." /></div>
+                        <div>Do not Email <input class="form-check-input" style="float: right;" type="checkbox"
+                                id="checkboxNoLabel" value="" aria-label="..." /></div>
+
+                    </div>
+
+
+                    <label for="CustomerNo">Correspondence Type</label>
+
+                    <select class="form-select" aria-label="Default select example">
+
+                    </select>
+
+
+
+
+
+                    <br>
+                    <br>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary mb-3 border "
+                            style="background-color: rgb(38, 72, 94); width: 40%; border-radius:8px">Update</button>
+                    </div>
+
+
+
+
+
+                </form>
+                <br>
+            </div>
+
+
+            <div class="container bg-white border  m-2 mt-4 p-3" style="  border-radius: 15px;">
+
+                <h4>Social Media</h4>
+                <br>
+
+                <form>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="CustomerNo">Website</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="VatNo">Twitter</label>
+                            <input type="name" class="form-control" id="VatNo" aria-describedby="emailHelp">
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="BalanceLCY">Instagram</label>
+                            <input type="name" class="form-control" id="BalanceLCY" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">Facebook</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="CustomerNo">Youtube</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">Linkedin</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+
+                        </div>
+
+                    </div>
+
+
+                </form>
+                <br>
+            </div>
+
+
+
+
+
+            <div class="container bg-white border  m-2 mt-4 p-3" style="  border-radius: 15px;">
+
+                <h4>Account Details</h4>
+                <br>
+
+                <form>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="CustomerNo">Release Order Until Date</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="VatNo">Credit Brand</label>
+                            <input type="name" class="form-control" id="VatNo" aria-describedby="emailHelp">
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="BalanceLCY">HSBC Account Number</label>
+                            <input type="name" class="form-control" id="BalanceLCY" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">Order Priority</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="CustomerNo">Sales target for Year</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">HSBC account Opening Date</label>
+                            <select class="form-select" aria-label="Default select example">
+
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="CustomerNo">Registration No.</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">Courior Notification Mobile Number</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="CustomerNo">Blocked</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">Courior Notification Email</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="CustomerNo">Daily Order cutoff Time</label>
+                            <select class="form-select" aria-label="Default select example">
+
+                            </select>
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">Responsibility Centre</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="CustomerNo">Service zone code</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">Document sending profile</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="CustomerNo">Language Code</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group col">
+                            <label for="CustomerNo">Last Date modified</label>
+                            <input type="name" class="form-control" id="CustomerNo" aria-describedby="emailHelp">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="form-group col">
+                            <label for="CustomerNo">Last invoice date</label>
+                            <select class="form-select" aria-label="Default select example">
+
+                            </select>
+                        </div>
+                        <div class="form-group col">
+
+                        </div>
+
+                    </div>
+
+
+                </form>
+                <br>
+            </div>
+
+
+        </div>
+
+        <div class="col-lg-7">
+
+            <div class="m-2 row ">
+                <div class="mt-md-2 bg-white border  col p-3 d-flex" style="  border-radius: 15px;">
+
+                    <div class="d-flex flex-column justify-content-between ms-4 ps-3">
+                        <div>
+                            <h4> Last 12 Months Sales</h4>
+
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                January
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+                                    class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-currency-pound" viewBox="0 0 16 16">
+                                    <path
+                                        d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z" />
+                                </svg> 0.00
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div> February </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+                                    class="bi bi-dash" viewBox="0 0 16 16">
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                </svg>
+                                
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-currency-pound" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z" />
+                                    </svg> 0.00
+
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div> March</div>
+                                <div>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+                                        class="bi bi-dash" viewBox="0 0 16 16">
+                                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                    </svg>
+
+                                    
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-currency-pound" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z" />
+                                        </svg> 0.00
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div>April</div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-currency-pound" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z" />
+                                            </svg> 0.00
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between">
+                                        <div> May</div>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                                fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-currency-pound"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z" />
+                                                </svg> 0.00
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between">
+                                            <div> June </div>
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                                    fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                                </svg>
+                                                
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-currency-pound"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z" />
+                                                    </svg> 0.00
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div> July </div>
+                                                <div>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                                        fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                                    </svg>
+                                                    
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-currency-pound"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z" />
+                                                        </svg> 0.00
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex justify-content-between">
+                                                    <div>August</div>
+                                                    <div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                                            fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                                        </svg>
+                                                        
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor"
+                                                                class="bi bi-currency-pound" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z" />
+                                                            </svg> 0.00
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="d-flex justify-content-between">
+                                                        <div> September </div>
+                                                        <div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="36"
+                                                                height="36" fill="currentColor" class="bi bi-dash"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                                            </svg>
+                                                            
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                    height="16" fill="currentColor"
+                                                                    class="bi bi-currency-pound" viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z" />
+                                                                </svg> 0.00
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between">
+                                                            <div>October </div>
+                                                            <div>
+
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="36"
+                                                                    height="36" fill="currentColor" class="bi bi-dash"
+                                                                    viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                                                </svg>
+                                                                
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                        height="16" fill="currentColor"
+                                                                        class="bi bi-currency-pound"
+                                                                        viewBox="0 0 16 16">
+                                                                        <path
+                                                                            d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z" />
+                                                                    </svg> 0.00
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="d-flex justify-content-between">
+                                                                <div>November</div>
+                                                                <div>
+
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="36"
+                                                                        height="36" fill="currentColor"
+                                                                        class="bi bi-dash" viewBox="0 0 16 16">
+                                                                        <path
+                                                                            d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                                                    </svg>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="16" height="16" fill="currentColor"
+                                                                            class="bi bi-currency-pound"
+                                                                            viewBox="0 0 16 16">
+                                                                            <path
+                                                                                d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z" />
+                                                                        </svg> 0.00
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex justify-content-between">
+                                                                    <div> December </div>
+                                                                    <div>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                            width="36" height="36" fill="currentColor"
+                                                                            class="bi bi-dash" viewBox="0 0 16 16">
+                                                                            <path
+                                                                                d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                                                        </svg>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                width="16" height="16"
+                                                                                fill="currentColor"
+                                                                                class="bi bi-currency-pound"
+                                                                                viewBox="0 0 16 16">
+                                                                                <path
+                                                                                    d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.32 5.32 0 0 1 2.103.465V2.456A5.629 5.629 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4v.972z" />
+                                                                            </svg> 0.00
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+
+
+
+
+
+                                                            <div class="  col ">
+
+
+
+
+
+
+                                                                <div class="bg-white border  mt-2 " id="div-to-expand-2"
+                                                                    style="  border-radius: 15px;">
+                                                                    <div class='p-3 ps-5'
+                                                                        style="display: flex; justify-content: space-between;">
+
+                                                                        <h4>Top 6</h4><button id="fullscreen-2">
+                                                                            <img id='btn2' src="maximize.svg"
+                                                                                alt="Maximize" />
+                                                                        </button>
+                                                                    </div>
+
+                                                                    <table class="table borderless text-center"
+                                                                        style="color: rgb(38, 72, 94);">
+                                                                        <thead>
+                                                                            <tr
+                                                                                style="background-color:rgb(235, 245, 245); color: rgb(68, 102, 124); font-size: small;">
+                                                                                <th scope="col">Sr. No.</th>
+                                                                                <th scope="col">Item</th>
+
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th scope="row border-bottom-0">1</th>
+                                                                                <td>UC101</td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th scope="row">2</th>
+                                                                                <td>UC102</td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th scope="row">3</th>
+                                                                                <td>UC103</td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th scope="row">4</th>
+                                                                                <td>UC104</td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th scope="row">5</th>
+                                                                                <td>UC105</td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th scope="row">6</th>
+                                                                                <td>UC106</td>
+
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+
+
+
+
+                                                                <div class=" bg-white border  mt-3" id="div-to-expand-3"
+                                                                    style="  border-radius: 15px;">
+
+
+                                                                    <div class="p-3 ps-5"
+                                                                        style="display: flex; justify-content: space-between;">
+                                                                        <h4>Bottom 6</h4><button id="fullscreen-3">
+                                                                            <img id="btn3" src="maximize.svg"
+                                                                                alt="Maximize" />
+                                                                        </button>
+                                                                    </div>
+
+
+
+                                                                    <table class="table borderless text-center"
+                                                                        style="color: rgb(38, 72, 94);">
+                                                                        <thead>
+                                                                            <tr
+                                                                                style="background-color:rgb(235, 245, 245); color: rgb(68, 102, 124);font-size: small;">
+                                                                                <th scope="col">Sr. No.</th>
+                                                                                <th scope="col">Item</th>
+
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <th scope="row border-bottom-0">1</th>
+                                                                                <td>UC101</td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th scope="row">2</th>
+                                                                                <td>UC102</td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th scope="row">3</th>
+                                                                                <td>UC103</td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th scope="row">4</th>
+                                                                                <td>UC104</td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th scope="row">5</th>
+                                                                                <td>UC105</td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th scope="row">6</th>
+                                                                                <td>UC106</td>
+
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="m-2 mt-3">
+
+                                                            <div class=" bg-white border  p-3 mb-3"
+                                                                style="  border-radius: 15px;">
+                                                                <h4>Messages</h4>
+                                                                <br>
+
+                                                                <h6>Internal Messages</h6>
+
+                                                                <textarea class="form-control" rows="5"
+                                                                    id="comment"></textarea>
+
+                                                                <br>
+                                                                <h6>Picking Messages</h6>
+
+                                                                <textarea class="form-control" rows="5"
+                                                                    id="comment"></textarea>
+
+                                                                <br>
+                                                                <h6>External Messages</h6>
+
+                                                                <textarea class="form-control" rows="5"
+                                                                    id="comment"></textarea>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+                                                        <div class="container" style="margin: auto;">
+
+                                                            <div class="row">
+
+
+                                                                <div class="container me-2 border  bg-white col-md"
+                                                                    id="div-to-expand-4" style="  border-radius: 15px;">
+                                                                    <div
+                                                                        style="display: flex; justify-content: space-between;">
+
+                                                                        <h5 class="mt-2">Sales by Product</h5><button
+                                                                            id="fullscreen-4">
+                                                                            <img id="btn4" src="maximize.svg"
+                                                                                alt="Maximize" />
+                                                                        </button>
+                                                                    </div>
+
+                                                                    <br>
+                                                                    <div class="d-flex justify-content-around "
+                                                                        style="font-size:smaller;">
+
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: orange;"></span>2017
+                                                                        </div>
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: yellow;"></span>2018
+                                                                        </div>
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: blue"></span>2019
+                                                                        </div>
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: rgb(0, 183, 255);"></span>2020
+                                                                        </div>
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: rgb(38, 72, 94);"></span>2021
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                    <br>
+
+
+
+
+                                                                    <canvas id="myChart3"
+                                                                        style="max-width: 100%"></canvas>
+
+                                                                    <script>
+                                                                        var xValues = [];
+                                                                        var yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+                                                                        new Chart("myChart3", {
+                                                                            type: "line",
+                                                                            data: {
+                                                                                labels: xValues,
+                                                                                datasets: [{
+                                                                                    fill: false,
+                                                                                    label: 2021,
+                                                                                    lineTension: 0.1,
+                                                                                    backgroundColor: "rgba(0,0,255,1.0)",
+                                                                                    borderColor: "black",
+                                                                                    data: yValues
+                                                                                }]
+                                                                            },
+                                                                            options: {
+                                                                                legend: { display: false },
+                                                                                scales: {
+                                                                                    xAxes: [{
+                                                                                        gridLines: {
+                                                                                            display: false,
+                                                                                        },
+                                                                                    }],
+                                                                                    yAxes: [{
+                                                                                        display: true,
+                                                                                        ticks: {
+                                                                                            min: -0.001,
+                                                                                            steps: 10,
+                                                                                            stepValue: 5,
+                                                                                            max: 0.001
+                                                                                        }
+                                                                                    }]
+                                                                                },
+
+
+
+
+                                                                            }
+                                                                        });
+                                                                    </script>
+                                                                </div>
+
+
+
+
+                                                                <div class="container  border  bg-white col-md"
+                                                                    id="div-to-expand-5" style="  border-radius: 15px;">
+                                                                    <div
+                                                                        style="display: flex; justify-content: space-between;">
+
+                                                                        <h5 class="mt-2">Yearly Sales</h5><button
+                                                                            id="fullscreen-5">
+                                                                            <img id="btn5" src="maximize.svg"
+                                                                                alt="Maximize" />
+                                                                        </button>
+                                                                    </div>
+
+                                                                    <br>
+
+
+                                                                    <div class="d-flex justify-content-around "
+                                                                        style="font-size: smaller;">
+
+
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: rgb(38, 72, 94);"></span>Yearly
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                    <br>
+
+
+
+                                                                    <canvas id="myChart4"
+                                                                        style="max-width: 100%"></canvas>
+
+                                                                    <script>
+                                                                        var xValues = [];
+                                                                        var yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+                                                                        new Chart("myChart4", {
+                                                                            type: "line",
+                                                                            data: {
+                                                                                labels: xValues,
+                                                                                datasets: [{
+                                                                                    fill: false,
+                                                                                    label: 2021,
+                                                                                    lineTension: 0.1,
+                                                                                    backgroundColor: "rgba(0,0,255,1.0)",
+                                                                                    borderColor: "black",
+                                                                                    data: yValues
+                                                                                }]
+                                                                            },
+                                                                            options: {
+                                                                                legend: { display: false },
+                                                                                scales: {
+                                                                                    xAxes: [{
+                                                                                        gridLines: {
+                                                                                            display: false,
+                                                                                        },
+                                                                                    }],
+                                                                                    yAxes: [{
+                                                                                        display: true,
+                                                                                        ticks: {
+                                                                                            min: -0.001,
+                                                                                            steps: 10,
+                                                                                            stepValue: 5,
+                                                                                            max: 0.001
+                                                                                        }
+                                                                                    }]
+                                                                                },
+
+
+
+
+                                                                            }
+                                                                        });
+                                                                    </script>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="row">
+
+
+                                                                <div class=" container mt-2 me-2 border  bg-white col-md"
+                                                                    id="div-to-expand-6" style="  border-radius: 15px;">
+
+
+                                                                    <div
+                                                                        style="display: flex; justify-content: space-between;">
+
+                                                                        <h5 class="mt-2">Monthly Sales</h5><button
+                                                                            id="fullscreen-6">
+                                                                            <img id="btn6" src="maximize.svg"
+                                                                                alt="Maximize" />
+                                                                        </button>
+                                                                    </div>
+
+                                                                    <br>
+                                                                    <div class="d-flex justify-content-around "
+                                                                        style="font-size: smaller;">
+
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: orange;"></span>2017
+                                                                        </div>
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: yellow;"></span>2018
+                                                                        </div>
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: blue"></span>2019
+                                                                        </div>
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: rgb(0, 183, 255);"></span>2020
+                                                                        </div>
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: rgb(38, 72, 94);"></span>2021
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                    <br>
+
+                                                                    <canvas id="myChart"
+                                                                        style="max-width: 100%"></canvas>
+
+                                                                    <script>
+                                                                        var xValues = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                                                                        var yValues = [-0.0007, -0.00080, -0.0008, -0.0009, -0.0009, -0.0009, 0.00010, 0.00011, 0.00014, 0.00014, 0.00015];
+
+                                                                        new Chart("myChart", {
+                                                                            type: "line",
+
+                                                                            data: {
+                                                                                labels: xValues,
+                                                                                datasets: [{
+                                                                                    fill: false,
+                                                                                    lineTension: 0,
+                                                                                    backgroundColor: 'rgb(38, 72, 94)',
+                                                                                    borderColor: "rgb(38, 72, 94)",
+                                                                                    data: yValues,
+                                                                                    borderDash: [40, 15]
+                                                                                }]
+                                                                            },
+                                                                            options: {
+                                                                                legend: { display: false },
+                                                                                scales: {
+                                                                                    xAxes: [{
+                                                                                        gridLines: {
+                                                                                            display: false,
+                                                                                        },
+                                                                                        ticks: {
+                                                                                            fontSize: 10
+                                                                                        }
+
+                                                                                    }],
+                                                                                    yAxes: [{
+                                                                                        display: true,
+                                                                                        ticks: {
+                                                                                            min: -0.001,
+                                                                                            steps: 10,
+                                                                                            stepValue: 5,
+                                                                                            max: 0.001,
+                                                                                            fontSize: 10
+
+                                                                                        },
+
+
+                                                                                    }]
+                                                                                },
+
+
+                                                                            }
+                                                                        });
+                                                                    </script>
+                                                                </div>
+
+
+                                                                <div class="container mt-2 border  bg-white col-md"
+                                                                    id="div-to-expand-7" style="  border-radius: 15px;">
+
+
+
+                                                                    <div
+                                                                        style="display: flex; justify-content: space-between;">
+
+                                                                        <h5 class="mt-2">Sales by Category</h5><button
+                                                                            id="fullscreen-7">
+                                                                            <img id="btn7" src="maximize.svg"
+                                                                                alt="Maximize" />
+                                                                        </button>
+                                                                    </div>
+                                                                    <br>
+
+                                                                    <div class="d-flex justify-content-around "
+                                                                        style="font-size: smaller;">
+
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: orange;"></span>2017
+                                                                        </div>
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: yellow;"></span>2018
+                                                                        </div>
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: blue"></span>2019
+                                                                        </div>
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: rgb(0, 183, 255);"></span>2020
+                                                                        </div>
+                                                                        <div> <span class="dot me-1"
+                                                                                style="background-color: rgb(38, 72, 94);"></span>2021
+                                                                        </div>
+
+
+
+
+                                                                    </div>
+                                                                    <br>
+
+                                                                    <canvas id="myChart2"
+                                                                        style="max-width: 100%"></canvas>
+
+                                                                    <script>
+                                                                        var xValues = ['', '', '', '', '', '', '', '', '', ''];
+                                                                        var yValues = [-0.0007, -0.00080, -0.0008, -0.0009, -0.0009, -0.0009, 0.00010, 0.00011, 0.00014, 0.00014, 0.00015];
+
+                                                                        new Chart("myChart2", {
+                                                                            type: "line",
+                                                                            data: {
+                                                                                labels: xValues,
+                                                                                datasets: [{
+                                                                                    fill: false,
+                                                                                    label: 2021,
+                                                                                    lineTension: 0.1,
+                                                                                    backgroundColor: "rgb(38, 72, 94)",
+                                                                                    borderColor: "rgb(38, 72, 94)",
+                                                                                    data: yValues,
+                                                                                    borderDash: [40, 15]
+                                                                                }]
+                                                                            },
+                                                                            options: {
+                                                                                legend: { display: false },
+                                                                                scales: {
+                                                                                    xAxes: [{
+                                                                                        gridLines: {
+                                                                                            display: false,
+                                                                                        },
+                                                                                    }],
+                                                                                    yAxes: [{
+                                                                                        display: true,
+                                                                                        ticks: {
+                                                                                            min: -0.001,
+                                                                                            steps: 10,
+                                                                                            stepValue: 5,
+                                                                                            max: 0.001
+                                                                                        }
+                                                                                    }]
+                                                                                },
+
+
+
+
+                                                                            }
+                                                                        });
+                                                                    </script>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+                                                        <div class="m-2  ">
+                                                            <div class="container bg-white border p-3 mt-4 "
+                                                                style="  border-radius: 15px;">
+                                                                <h4>Question and Answers</h4>
+
+                                                                <br>
+
+                                                                <form>
+                                                                    <div class="row">
+                                                                        <div class="form-group col">
+                                                                            <label for="CustomerNo">How did you hear of
+                                                                                us?</label>
+                                                                            <select class="form-select"
+                                                                                aria-label="Default select example">
+
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="form-group col">
+                                                                            <label for="VatNo">No of employees?</label>
+                                                                            <select class="form-select"
+                                                                                aria-label="Default select example">
+
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </div>
+
+
+
+
+                                                                    <div class="row">
+
+                                                                        <div class="form-group col">
+                                                                            <label for="BalanceLCY">Company
+                                                                                turnover</label>
+                                                                            <select class="form-select"
+                                                                                aria-label="Default select example">
+
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="form-group col">
+                                                                            <label for="CustomerNo">Business
+                                                                                Type</label>
+                                                                            <select class="form-select"
+                                                                                aria-label="Default select example">
+
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="row">
+
+                                                                        <div class="form-group col">
+                                                                            <label for="CustomerNo">Main
+                                                                                Products</label>
+                                                                            <input type="name" class="form-control"
+                                                                                id="CustomerNo"
+                                                                                aria-describedby="emailHelp">
+                                                                        </div>
+                                                                        <div class="form-group col">
+                                                                            <label for="CustomerNo">Main Brands</label>
+                                                                            <input type="name" class="form-control"
+                                                                                id="CustomerNo"
+                                                                                aria-describedby="emailHelp">
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="row">
+
+                                                                        <div class="form-group col">
+                                                                            <label for="CustomerNo">Main
+                                                                                Suppliers</label>
+                                                                            <input type="name" class="form-control"
+                                                                                id="CustomerNo"
+                                                                                aria-describedby="emailHelp">
+                                                                        </div>
+                                                                        <div class="form-group col">
+                                                                            <label for="CustomerNo">Monthly speed on our
+                                                                                type of
+                                                                                clothings</label>
+                                                                            <select class="form-select"
+                                                                                aria-label="Default select example">
+
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="row">
+
+
+                                                                        <div class="form-group col">
+                                                                            <label for="CustomerNo">How long have they
+                                                                                been in the
+                                                                                business for?</label>
+                                                                            <select class="form-select"
+                                                                                aria-label="Default select example">
+
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </div>
+
+
+                                                                    <div class="row">
+
+                                                                        <div class="form-group col">
+                                                                            <label for="CustomerNo">Company
+                                                                                information</label>
+                                                                            <textarea class="form-control" rows="5"
+                                                                                id="comment"></textarea>
+                                                                        </div>
+
+
+                                                                    </div>
+
+
+                                                                </form>
+                                                                <br>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+
+                                                <script
+                                                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                                                    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                                                    crossorigin="anonymous"></script>
+
+                                                <script
+                                                    src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+                                                <script
+                                                    src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+                                                <script src="index.js"></script>
+
+</body>
+
+</html>
